@@ -1,5 +1,8 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage{mdframed}
+
+\newmdtheoremenv{theo}{Definition}
 
 \title{argument search}
 \begin{document}
@@ -8,10 +11,36 @@
 	\end{frame}
 
 	\section{Argumentationstheorie}
-	\begin{frame}
+	\begin{frame}{Argumente}
 		%todo: was ist ein Argument?
 		%todo: was ist ein gutes und was ein schlechtes Argument?
 		%todo: wie ist ein Argument aufgebaut?
+		\begin{quote}
+			"[An argument is] a collection of truth-bearers (that is, the things that bear truth and falsity, or are true and false) some of which are offered as reasons for one of them, the conclusion."
+			\flushright \tiny Matthew McKeon in: Internet Encyclopedia of Philosophy, Eintrag "Argument"
+		\end{quote}
+		\begin{itemize}[<+->]
+			\item Prämissen $\Rightarrow$ Konklusion
+			\item was ist ein gutes und was ein schlechtes Argument?
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Klassifizierung von Argumenten}
+		logisch ("Fehlerhaftigkeit"):
+		\begin{itemize}[<+->]
+			\item Gültigkeit
+			\begin{itemize}
+				\item aus den Prämissen lässt sich logisch die Konklusion folgern
+			\end{itemize}
+			\item Schlüssigkeit
+			\begin{itemize}
+				\item gültig und die Prämissen sind wahr
+			\end{itemize}
+		\end{itemize}
+		subjektiv ("Überzeugungskraft")		\begin{itemize}[<+->]
+			\item Konkretheit
+			\item Ausrichtung auf den Adressaten
+			\item Formulierung - moralisch/emotional/plausibel
+		\end{itemize}
 	\end{frame}
 	\section{Suchmaschinen und retrieval-Modele}
 	\section{bestehende Suchmaschinen}
