@@ -1,4 +1,5 @@
 \documentclass{beamer}
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{mdframed}
 
@@ -6,14 +7,15 @@
 
 \title{Argument Search}
 \subtitle{Einleitung und aktueller Stand}
+\author{Nico Weidmann \and Nick Heilenkötter \and Florian Euchner}
+\date{20. August 2018}
 
 \begin{document}
-
 	\begin{frame}
 		\maketitle
 	\end{frame}
 
-	\begin{frame}{Übersicht}
+	\begin{frame}{Gliederung}
 		\tableofcontents
 	\end{frame}
 
@@ -49,6 +51,7 @@
 			\item Formulierung - moralisch/emotional/plausibel
 		\end{itemize}
 	\end{frame}
+
 	\section{Suchmaschinen und Retrievalmodelle}
 
 	\section{Bestehende Suchmaschinen}
@@ -91,7 +94,88 @@
 	\end{frame}
 
 	\section{Probleme bei der Argumentensuche}
-	\section{Lösungsvorschlag/Arbeitshypothese}
+	\begin{frame}{Probleme bei der Argumentensuche}{Warum nicht Google?}
+		\begin{itemize}[<+->]
+			\item Suchbegriff nimmt Antwort vorweg: Keine neutrale, umfassende Information
+			\alt <1, 2>{
+				\begin{figure}
+					\includegraphics<1>[width=0.8\textwidth]{img/s21_pro.png}
+					\includegraphics<2>[width=0.8\textwidth]{img/s21_contra.png}
+					\caption{Google-Suche nach S21 mit positiv / negativ konnotierten Begriffen}
+				\end{figure}
+			}{}
+			\item<3-> Ergebnisse nach Relevanz, nicht Qualität sortiert
+			\item<4-> Keine Trennung von Thesen und Argumenten
+			\item<5-> Schwer verständlich: Lange Artikel, viel Text
+			\item<6-> Erkennung von Trugschlüssen, Verschwörungstheorien bleibt Nutzer überlassen
+			\item<7-> Suchmaschinen nehmen gesellschaftliche Verantwortung kaum wahr
+		\end{itemize}
+
+		
+	\end{frame}
+
+	\begin{frame}{Probleme bei der Argumentensuche}{Schlechte Argumente - Trugschlüsse (\textit{fallacies})}
+		\begin{itemize}[<+->]
+			\item Persönlicher Angriff (\textit{ad hominem})
+			\begin{quote}
+				\small You are the single biggest liar, you probably are worse than Jeb Bush.
+				\begin{flushright}
+					\tiny Donald Trump zu Ted Cruz
+				\end{flushright}
+			\end{quote}
+			\item Strohmann (\textit{straw man})
+			\begin{quote}{}
+				\small Over and over, we have been told by our opponents that bigger tax cuts and fewer regulations are the only way.
+				\begin{flushright}
+					\tiny Barack Obama vor der DNC, 2012
+				\end{flushright}
+			\end{quote}
+			\item Falsches Dilemma (\textit{false dichotomy})
+			\begin{quote}{}
+				\small Every nation, in every region, now has a decision to make. Either you are with us, or you are with the terrorists.
+				\begin{flushright}
+					\tiny George W. Bush nach 9/11
+				\end{flushright}
+			\end{quote}
+			\item uvm. \footnote{Siehe auch \href{https://en.wikipedia.org/wiki/List_of_fallacies}{Wikipedia: List of fallacies}}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Probleme bei der Argumentensuche}{Psychologie - Kognitive Verzerrungen (\textit{cognitive biases})}
+		\begin{itemize}
+			\item Bestätigungsfehler (\textit{confirmation bias})
+			\item Congruence bias
+			\item Dunning–Kruger effect
+			\item Stereotypisierung
+			\item Gerechte-Welt-Glaube (\textit{just-world hypothesis})
+			\item uvm. \footnote{Siehe auch \href{https://en.wikipedia.org/wiki/List_of_cognitive_biases}{Wikipedia: List of cognitive biases}}
+		\end{itemize}
+	\end{frame}
+
+	\section{Lösungsvorschlag / Arbeitshypothese}
+	\begin{frame}{Lösungsvorschlag / Arbeitshypothese}{Die ideale Suchmaschine}
+		\begin{block}{Informationsbeschaffung mit Argumentensuche sollte sein...}
+			\begin{itemize}
+				\item Zum Suchbegriff passend
+				\item Neutral, verschiedene Thesen mit ``Pro'' und ``Contra''
+				\item Umfassend, Argumente nach Qualität sortiert
+				\item Leicht und schnell verständlich
+				\item Trugschlüsse und ``kontroverse Theorien'' werden nicht versteckt, aber als solche markiert
+				\item Menschliche Psychologie sollte beim Design einer Suchmaschine berücksichtigt werden
+			\end{itemize}
+		\end{block}
+		\begin{block}{Grundproblem: Filter bubbles / Echokammern / Fake news}
+			Suchmaschine soll auch bei kontroversen Themen funktionieren!
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Arbeitshypothese}
+		Die Qualität der Suchergebnisse (Argumente) kann verbessert werden durch
+		\begin{itemize}[<+->]
+			\item \textbf{Nutzerbewertungen}: Nutzer können Argumente als gut befinden und \textit{fallacies} markieren
+			\item Trennung von These und Thema: Argumente sind immer an eine \textbf{These} (\textit{plastic bags should be banned}) und nicht an ein \textbf{Thema} (\textit{plastic bags}) geknüpft
+		\end{itemize}
+	\end{frame}
 
 	\section{Roadmap}
 	\begin{frame}{Roadmap}
