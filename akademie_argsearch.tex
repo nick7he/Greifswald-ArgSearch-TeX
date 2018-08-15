@@ -46,8 +46,36 @@
 	\section{bestehende Suchmaschinen}
 	\section{Probleme bei der Argumentensuche}
 	\section{Lösungsvorschlag/Arbeitshypothese}
+
 	\section{Roadmap}
-	\begin{frame}
+	\begin{frame}{Roadmap}
 		%todo: was wollen wir noch tun? Suchmaschinen vergleichen/bewerten..
+		\begin{enumerate}
+			\item Implementierung einer Argument-Suchmaschine
+			\begin{itemize}
+				\item Terrier IR Platform
+				\item \url{args.me}-Datensatz
+			\end{itemize}
+			\item Implementierung eines Feedbacksystems zur Bewertung von Argumenten
+			\begin{itemize}
+				\item Sophismen / Scheinargumente erkennen und kenntlich machen
+				\item Einbeziehung des Feedbacks in das Ranking der Argumente
+			\end{itemize}
+			\item Evaluierung der Suchmaschine mit Feedback gegen die Suchmaschine ohne Feedback\\(oder evtl. eine 3. Suchmaschine)
+			\begin{itemize}
+				\item Test anhand ausgewählter Suchanfragen
+				\item evtl. Pooling der Suchergebnisse
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+	\begin{frame}{Aktueller Stand}
+		\begin{itemize}
+			\item erste Version einer Suchmaschine implementiert
+			\begin{itemize}
+				\item \url{args.me}-Datensatz für Terrier indiziert
+				\item Suche über einheitliche API möglich
+			\end{itemize}
+			% todo: auf aktuellen Stand bringen
+		\end{itemize}
 	\end{frame}
 \end{document}
