@@ -50,7 +50,46 @@
 		\end{itemize}
 	\end{frame}
 	\section{Suchmaschinen und Retrievalmodelle}
+
 	\section{Bestehende Suchmaschinen}
+	\begin{frame}{Existierende Argument-Suchmaschinen}
+		\begin{itemize}
+			\item args (\url{args.me})
+			\item ArgumenText (\url{www.argumentsearch.com})
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{args}
+		\begin{itemize}
+			\item Entwickelt an der Bauhaus-Universität Weimar
+			\item Index bestehend aus 291.440 Argumenten
+			\begin{itemize}
+				\item geschürft von 5 Debattierportalen
+				\item bestehende Struktur der Debatten genutzt
+			\end{itemize}
+			\item Annotation der Argumente mit ``Pro'' und ``Con''
+			\item Implementierung basierend auf Apache UIMA und Apache Lucene
+		\end{itemize}
+		~\\
+		\tiny Wachsmuth, Henning, et al. "Building an argument search engine for the web."
+		\textit{Proceedings of the 4th Workshop on Argument Mining}. 2017.
+	\end{frame}
+	\begin{frame}{ArgumenText}
+		\begin{itemize}
+			\item Entwickelt an der TU Darmstadt
+			\item 400 Mil. heterogene englische Textdokumente
+			\begin{itemize}
+				\item basierend auf CommonCrawl
+				\item keine Debattenstruktur / annotierte Argumente
+			\end{itemize}
+			\item Indexing und Retrieval basierend auf Elasticsearch
+			\item Identifikation der Argumente nach Retrieval durch ein neuronales Netz
+		\end{itemize}
+		~\\
+		\tiny Stab, Christian, et al. "ArgumenText: Searching for Arguments in Heterogeneous Sources."
+		\textit{Proceedings of the 2018 Conference of the North American Chapter of the Association for
+		Computational Linguistics: Demonstrations}. 2018.
+	\end{frame}
+
 	\section{Probleme bei der Argumentensuche}
 	\section{Lösungsvorschlag/Arbeitshypothese}
 
