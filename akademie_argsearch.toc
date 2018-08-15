@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Argumente}{2}{0}{1}
-\beamer@sectionintoc {2}{eigene Suchmaschine}{3}{0}{2}
-\beamer@sectionintoc {3}{Bewertung von Suchmaschinen}{4}{0}{3}
