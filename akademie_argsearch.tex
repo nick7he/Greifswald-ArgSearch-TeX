@@ -53,8 +53,8 @@
 	\end{frame}
 
 	\section{Suchmaschinen und Retrievalmodelle}
-	\begin{frame}{Suchmaschinen und Information Retrieval}
-		\begin{itemize}
+	\begin{frame}{Suchmaschinen}{Suche durch Information Retrieval}
+		\begin{itemize}[<+->]
 			\item computergestütztes Suchen nach komplexen Inhalten (hier: Textpassagen)
 			\item verschiedene Modelle zur Auswahl und relevanter Ergebnisse
 			\item Relevanz nicht binär: Sortierung der Ausgabe
@@ -76,20 +76,19 @@
 			\item probabilistisches gewichtetes Information Retrieval
 			\item Ziel: Informationsgehalt eines Dokuments ermitteln
 		\end{itemize}
-		\begin{enumerate}
-			\item Auswahl eines Zufallsmodells
+		\begin{enumerate}[<+->]
+			\item ''elite set'' aus den Dokumenten, in denen das Wort (häufig) vorkommt
+			\item gemeinsam mit Auftreten in allen Dokumenten: Häufigkeitsverteilung aus einem zu wählenden Zufallsmodell
+			\item Gewichtung
 			\begin{itemize}
-				\item \begin{quote}
-					"The more the divergence of the within-document term-frequency from its frequency within the collection, the more the information carried by the word t in the document d."\footnote{\href{http://terrier.org/docs/v3.5/dfr_description.html}{terrier.org}}
-				\end{quote}
-				\item verschiedene Zufallsmodelle...
+				\item je häufiger das Wort, desto relevanter
+				\item je seltener das Wort erwartet wurde (nach zufälliger Verteilung), desto relevanter ist das Vorkommen
 			\end{itemize}
-			\item ...
 		\end{enumerate}
 	\end{frame}
-
-	\begin{frame}{Proximity}
-		\begin{itemize}
+	
+	\begin{frame}{mögliche Erweiterung der Modelle}{Proximity}
+		\begin{itemize}[<+->]
 			\item zusätzliche Berücksichtigung der Nähe der Anfrageterme zueinander
 			\item Dokumente in denen die gesuchten Terme dicht beieinander liegen sind relevanter
 			\item z.B. durch Markov Random Fields (MRF)
