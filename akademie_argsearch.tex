@@ -4,6 +4,12 @@
 \usepackage{mdframed}
 
 \newmdtheoremenv{theo}{Definition}
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
 
 \title{Argument Search}
 \subtitle{Einleitung und aktueller Stand}
@@ -21,9 +27,6 @@
 
 	\section{Argumentationstheorie}
 	\begin{frame}{Argumente}
-		%todo: was ist ein Argument?
-		%todo: was ist ein gutes und was ein schlechtes Argument?
-		%todo: wie ist ein Argument aufgebaut?
 		\begin{quote}
 			"[An argument is] a collection of truth-bearers (that is, the things that bear truth and falsity, or are true and false) some of which are offered as reasons for one of them, the conclusion."
 			\flushright \tiny Matthew McKeon in: Internet Encyclopedia of Philosophy, Eintrag ''Argument''
@@ -79,7 +82,7 @@
 		\begin{enumerate}[<+->]
 			\item ''elite set'' aus den Dokumenten, in denen das Wort (häufig) vorkommt
 			\item gemeinsam mit Auftreten in allen Dokumenten: Häufigkeitsverteilung aus einem zu wählenden Zufallsmodell
-			\item Gewichtung
+			\item Gewichtung \blfootnote{Siehe auch: \href{http://www.is.informatik.uni-duisburg.de/bib/pdf/ir/Abolhassani_Fuhr_04.pdf}{Abolhassani und Fuhr: Divergence From Randomness Approach for Content-Only Search in XML Documents}}
 			\begin{itemize}
 				\item je häufiger das Wort, desto relevanter
 				\item je seltener das Wort erwartet wurde (nach zufälliger Verteilung), desto relevanter ist das Vorkommen
@@ -91,7 +94,7 @@
 		\begin{itemize}[<+->]
 			\item zusätzliche Berücksichtigung der Nähe der Anfrageterme zueinander
 			\item Dokumente in denen die gesuchten Terme dicht beieinander liegen sind relevanter
-			\item z.B. durch Markov Random Fields (MRF)
+			\item z.B. durch Markov Random Fields (MRF) \blfootnote{Siehe auch: \href{http://terrier.org/docs/v3.5/javadoc/org/terrier/matching/dsms/MRFDependenceScoreModifier.html}{terrier.org}}
 		\end{itemize}
 	\end{frame}
 
