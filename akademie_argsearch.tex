@@ -26,7 +26,7 @@
 		%todo: wie ist ein Argument aufgebaut?
 		\begin{quote}
 			"[An argument is] a collection of truth-bearers (that is, the things that bear truth and falsity, or are true and false) some of which are offered as reasons for one of them, the conclusion."
-			\flushright \tiny Matthew McKeon in: Internet Encyclopedia of Philosophy, Eintrag "Argument"
+			\flushright \tiny Matthew McKeon in: Internet Encyclopedia of Philosophy, Eintrag ''Argument''
 		\end{quote}
 		\begin{itemize}[<+->]
 			\item Prämissen $\Rightarrow$ Konklusion
@@ -53,6 +53,48 @@
 	\end{frame}
 
 	\section{Suchmaschinen und Retrievalmodelle}
+	\begin{frame}{Suchmaschinen und Information Retrieval}
+		\begin{itemize}
+			\item computergestütztes Suchen nach komplexen Inhalten (hier: Textpassagen)
+			\item verschiedene Modelle zur Auswahl und relevanter Ergebnisse
+			\item Relevanz nicht binär: Sortierung der Ausgabe
+			\item verschiedene Modelle:
+			\begin{itemize}
+				\item linktopologische Modelle (z.B. Google)
+				\item Nutzer-Nutzungsmodell
+				\item $\ldots$
+				\item Textstatistik
+				\begin{itemize}
+					\item Divergence From Randomness (DFR)
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Divergence From Randomness}
+		\begin{itemize}
+			\item probabilistisches gewichtetes Information Retrieval
+			\item Ziel: Informationsgehalt eines Dokuments ermitteln
+		\end{itemize}
+		\begin{enumerate}
+			\item Auswahl eines Zufallsmodells
+			\begin{itemize}
+				\item \begin{quote}
+					"The more the divergence of the within-document term-frequency from its frequency within the collection, the more the information carried by the word t in the document d."\footnote{\href{http://terrier.org/docs/v3.5/dfr_description.html}{terrier.org}}
+				\end{quote}
+				\item verschiedene Zufallsmodelle...
+			\end{itemize}
+			\item ...
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{Proximity}
+		\begin{itemize}
+			\item zusätzliche Berücksichtigung der Nähe der Anfrageterme zueinander
+			\item Dokumente in denen die gesuchten Terme dicht beieinander liegen sind relevanter
+			\item z.B. durch Markov Random Fields (MRF)
+		\end{itemize}
+	\end{frame}
 
 	\section{Bestehende Suchmaschinen}
 	\begin{frame}{Existierende Argument-Suchmaschinen}
