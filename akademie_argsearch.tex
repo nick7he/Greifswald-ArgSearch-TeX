@@ -139,7 +139,7 @@
 
 	\section{Lösungsansätze}
 	\subsection{Suchmaschinen und Retrievalmodelle}
-	\begin{frame}{Suchmaschinen}{Was ist relevant?}
+	\begin{frame}[0]{Suchmaschinen}{Was ist relevant?}
 		\begin{itemize}
 			\item subjektive Relevanz
 			\begin{itemize}
@@ -156,7 +156,7 @@
 	\begin{frame}{Suchmaschinen}{Suche durch Information Retrieval}
 		\begin{itemize}[<+->]
 			\item computergestütztes Suchen nach komplexen Inhalten (hier: Textpassagen)
-			\item verschiedene Modelle zur Auswahl und relevanter Ergebnisse
+			\item verschiedene Modelle zur Auswahl relevanter Ergebnisse
 			\item Relevanz nicht binär: Sortierung der Ausgabe
 			\item verschiedene Modelle:
 			\begin{itemize}
@@ -263,11 +263,10 @@
 		\end{block}
 	\end{frame}
 
-	\begin{frame}{Arbeitshypothese}
-		Die Qualität der Suchergebnisse (Argumente) kann verbessert werden durch
+	\begin{frame}{Arbeitshypothese\only<2->{n}}
 		\begin{itemize}[<+->]
-			\item \textbf{Nutzerbewertungen}: Nutzer können Argumente als gut befinden und \textit{fallacies} markieren
-			\item Trennung von These und Thema: Argumente sind immer an eine \textbf{These} (\textit{plastic bags should be banned}) und nicht an ein \textbf{Thema} (\textit{plastic bags}) geknüpft
+			\item Durch die Wahl eines geeigneten \textbf{Retrievalmodells} lässt sich die Relevanz der Suchergebnisse verbessern
+			\item Unter Einbeziehung der Top-Answers auf Q\&A-Plattformen ist eine \textbf{halb-automatische Evaluierung} der Ergebnisse von Argumentsuchmaschinen möglich
 		\end{itemize}
 	\end{frame}
 
@@ -277,30 +276,31 @@
 		\begin{enumerate}
 			\item \textbf{Implementierung einer Argument-Suchmaschine}
 			\begin{itemize}
-				\item Terrier IR Platform
+				\item Terrier IR Platform (moderne Retrievalmodelle)
 				\item \url{args.me}-Datensatz
 			\end{itemize}
-			\item \textbf{Implementierung eines Feedbacksystems} zur Bewertung von Argumenten
-			\begin{itemize}
-				\item Sophismen / Scheinargumente erkennen und kenntlich machen
-				\item Einbeziehung des Feedbacks in das Ranking der Argumente
-			\end{itemize}
-			\item \textbf{Evaluierung der Suchmaschine} mit Feedback gegen die Suchmaschine ohne Feedback\\(oder evtl. eine 3. Suchmaschine)
+			\item \textbf{Implementierung einer Evaluierungsplattform} zur Bewertung von Suchmaschinen
 			\begin{itemize}
 				\item Test anhand ausgewählter Suchanfragen
-				\item evtl. Pooling der Suchergebnisse
-				\item ''best answers'' aus anderen Datensätzen
+				\item Pooling der Top-Suchergebnisse von args und eigener Implementierung
+				\item Bewertung der Suchergebnisse durch Assessoren
+			\end{itemize}
+			\item \textbf{Alternative Evaluierungsmethode}: halbautomatische Evaluierung
+			\begin{itemize}
+				\item Nutzung von ``best answers'' auf Q\&A-Plattformen (Yahoo-Answers, /r/ChangeMyView)
+				\item Bestimmung der Ähnlichkeit der Suchergebnisse zur Argumentation in der best answer
 			\end{itemize}
 		\end{enumerate}
 	\end{frame}
 	\begin{frame}{Aktueller Stand}
 		\begin{itemize}
-			\item erste Version einer Suchmaschine implementiert
+			\item Suchmaschine auf Basis von Terrier implementiert
 			\begin{itemize}
 				\item \url{args.me}-Datensatz für Terrier indiziert
 				\item Suche über einheitliche API möglich
 			\end{itemize}
-			\item Überlegungen zur Evaluation der Suchmaschinen
+			\item Beginn der Implementierung der Evaluierungsplattform
+			\item Erste Überlegungen zu halbautomatischer Evaluierung
 			\begin{itemize}
 				\item Posts und Kommentare von \url{/r/ChangeMyView}?
 			\end{itemize}
@@ -308,5 +308,13 @@
 		\begin{figure}
 			\includegraphics[width=0.95\textwidth]{img/searchui-prototype}
 		\end{figure}
+	\end{frame}
+	\begin{frame}{Nächste Schritte}
+		\begin{itemize}
+			\item Bestimmung der häufigsten Themen im Datensatz
+			\item Auswahl der zur Evaluierung genutzten Informationsbedürfnisse und Suchanfragen
+			\item Festlegung der Qualitätskriterien zur Evaluierung\\
+			$\Rightarrow$ was sind ``gute'' Argumente?
+		\end{itemize}
 	\end{frame}
 \end{document}
