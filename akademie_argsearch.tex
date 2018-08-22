@@ -218,7 +218,7 @@
 				\item keine Debattenstruktur / annotierte Argumente
 			\end{itemize}
 			\item Indexing und Retrieval basierend auf Elasticsearch
-			\item Identifikation der Argumente nach Retrieval durch ein neuronales Netz
+			\item Erst Retrieval ganzer Dokumente, anschließend Extraktion der Argumente durch neuronales Netz
 		\end{itemize}
 		~\\
 		\tiny Stab, Christian, et al. ``ArgumenText: Searching for Arguments in Heterogeneous Sources.''
@@ -232,8 +232,8 @@
 		\end{figure}
 	\end{frame}
 
-	\subsection{Lösungsvorschlag / Arbeitshypothese}
-	\begin{frame}{Lösungsvorschlag / Arbeitshypothese}{Die ideale Suchmaschine}
+	\subsection{Lösungsvorschlag}
+	\begin{frame}{Die ideale Argumentsuchmaschine}{Ideensammlung}
 		\begin{block}{Informationsbeschaffung mit Argumentensuche sollte sein...}
 			\begin{itemize}
 				\item Zum Suchbegriff passend
@@ -249,6 +249,7 @@
 		\end{block}
 	\end{frame}
 
+	\section{Arbeitshypothese}
 	\begin{frame}{Arbeitshypothese\only<2->{n}}
 		\begin{itemize}[<+->]
 			\item Durch die Wahl eines geeigneten \textbf{Retrievalmodells} lässt sich die Relevanz der Suchergebnisse verbessern
