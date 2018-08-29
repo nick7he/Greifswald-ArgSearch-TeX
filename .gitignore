@@ -1,5 +1,9 @@
 *
 !.gitignore
+Presentation/*
+!*.tex
+!*.sh
+Evaluation/*
 !*.tex
 !*.sh
 !img
