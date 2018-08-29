@@ -1,8 +1,10 @@
 *
 !.gitignore
+!Presentation
 Presentation/*
 !*.tex
 !*.sh
+!Evaluation
 Evaluation/*
 !*.tex
 !*.sh
